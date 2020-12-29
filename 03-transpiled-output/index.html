@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Sandbox</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/app.js" type="module"></script>
+  </head>
+  <body>
+    <div class="code">
+      <textarea id="editor" spellcheck="false">
+class Banana {
+  constructor() {
+    this.bananaColor = 'yellow'
+  }
+
+  color() {
+    console.log(this.bananaColor)
+  }
+}
+
+const banana = new Banana()
+banana.color()
+      </textarea>
+    </div>
+
+    <div class="result">
+      <div id="output">
+        <iframe id="iframe"></iframe>
+        <div id="errors" class="hidden"></div>
+      </div>
+      <div id="source"></div>
+    </div>
+  </body>
+</html>
